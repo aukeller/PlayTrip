@@ -1,3 +1,1 @@
-![Alt text](/relative/path/to/capture.png?raw=true "app main")
-
-![image info](./pictures/playlist.png)
+![image info](https://github.com/aukeller/PlayTrip/blob/main/Capture.PNG)
