@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
+    
+
+    <title>Playtrip</title>
+</head> 
+<body> 
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+
+    <div class="container h-100">   
+        <div>
+            <h1 class="mt-4 display-3 text-center" id="logo">Playtrip</h1>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <form action="/" method="post" class="col-12">
+                <div class="mt-4 col-4 mx-auto">
+                    <label for="destination" class="form-label">Where are you going?</label>
+                    <input autocomplete="off" autofocus class="form-control" name= "destination" type="text">
+                </div>
+
+                <div class="mt-4 col-4 mx-auto">
+                    <label for='transportation' class="form-label">Select a form of transportation:</label>
+                    <select class="form-select form-select-sm" name="transportation">
+                        <option disabled selected>-</option>
+                        <option>Driving</option>
+                        <option>Bicycling</option>
+                        <option>Walking</option>
+                    </select>
+                </div>
+                
+                <div class="mt-4 col-4 mx-auto">
+                    <label for="playlist_name" class="form-label">Name of your playlist?</label>
+                    <input autocomplete="off" class="form-control" name="playlist_name" type="text">
+                </div>
+                
+                <div class="mt-4 d-grid gap-2 col-4 mx-auto">
+                    <button class="btn btn-outline-success" type="submit" id="create">Create Playlist</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

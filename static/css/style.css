@@ -1,0 +1,17 @@
+body, html {
+    height: 100%;
+}
+
+.alert-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .alert {
+    position: absolute;
+    width: 100%;
+  }
+
+  #logo {
+      color: darkgreen;
+  }
